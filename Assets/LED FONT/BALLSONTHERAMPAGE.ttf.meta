@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d481240d73c2e4d16a32dab79833e8ab
+timeCreated: 1530555541
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Balls on the rampage
+  fontNames:
+  - Balls on the rampage
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
