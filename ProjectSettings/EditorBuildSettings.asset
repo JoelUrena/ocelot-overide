@@ -8,6 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/free falling.unity
     guid: 0f7fb7171abf70449886e7f02d1f5ad3
-  - enabled: 1
-    path: Assets/Part 2.unity
-    guid: e739a43f6cbcf4aa0a6bad1a700613b1
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  m_configObjects: {}

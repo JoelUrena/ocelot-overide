@@ -12,13 +12,14 @@ public class wallScript : MonoBehaviour
     public GameObject challenge1;
     public float timer;
     public GameObject timerText;
-
+    public bool jiggy;
     public GameManager manager;
     // Use this for initialization
     void Start()
     {
         challenge1.SetActive(false);
         timer = 0;
+        jiggy = false;
     }
 
     // Update is called once per frame
@@ -27,8 +28,8 @@ public class wallScript : MonoBehaviour
         
         if (Camera.main.transform.position.z > transform.position.z)
         {
-            Debug.Log("Hi I exceed you!");
-            
+            //Debug.Log("Hi I exceed you!");
+            jiggy = true;
            if (!forklift.isPlaying)
            {
                forklift.Play();

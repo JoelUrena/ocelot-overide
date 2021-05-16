@@ -7,6 +7,8 @@ public class EnemySpawner : MonoBehaviour {
 	public Vector3[] positions;
 	public GameObject enemyPrefab;
 	public Transform enemyGrourp;
+	
+	
 
 	public GameManager manager;
 	// Use this for initialization
@@ -19,11 +21,11 @@ public class EnemySpawner : MonoBehaviour {
 		//if (manager.hasGameStarted)
 			//transform.Translate (Vector3.back * 0.1f, Space.World);
 		if (Camera.main.transform.position.z > transform.position.z) {
-			Debug.Log ("Hi I exceed you!");
 			for (int i = 0; i < positions.Length; i++) {
 				Instantiate (enemyPrefab, positions [i], Quaternion.identity, enemyGrourp);
 			}
 			Destroy (gameObject);
 		}
+		
 	}
 }

@@ -26,15 +26,19 @@ public class GameManager : MonoBehaviour {
     public AudioSource reload;
     public bool isGameOverTrue;
     public GameObject gameOverScreen;
+    public GameObject winScreen;
     public AudioSource gameOverSound;
     public int timesCounter;
     public GameObject multiPlyer;
     public int tempBullet;
+    public bool youWon;
+    public AudioSource youWonSound;
 
-	// Use this for initialization
-	void Start () 
+    // Use this for initialization
+    void Start () 
 	{
-		if (SceneManager.GetActiveScene ().name == "free falling") {
+        Application.targetFrameRate = 60;//this is the fixed frame rate
+        if (SceneManager.GetActiveScene ().name == "free falling") {
 			bullets = 12;//the amount of bullets you have
 			scoreTemp = 0;//the temporary score starts out at 0
 			scoreUI = 0;//the score that will show in the ui will start out as 0
@@ -50,7 +54,9 @@ public class GameManager : MonoBehaviour {
         //DontDestroyOnLoad (hfehfhfhfhfhfhfhf);
         isGameOverTrue = false;
         gameOverScreen.SetActive(false);
+        winScreen.SetActive(false);
         multiPlyer.SetActive(false);
+        youWon = false;
 
     }
 	
@@ -119,6 +125,10 @@ public class GameManager : MonoBehaviour {
         {
             isGameOverTrue = true;
         }
+        else if (scoreUI >= 10000 && timer >= 60 && hasGameStarted == true)
+        {
+            youWon = true;
+        }
         if (timer >= 54 && timer <=60)
         {
             if (!gameOverSound.isPlaying)
@@ -129,7 +139,8 @@ public class GameManager : MonoBehaviour {
         if (isGameOverTrue == true)
         {
             gameOverScreen.SetActive(true);
-            
+            hasGameStarted = false;
+            pauseText.SetActive(false);
         }
         if (timesCounter >= 2)
         {
@@ -151,6 +162,20 @@ public class GameManager : MonoBehaviour {
                 reload.Play();
             }
             tempBullet = 0;
+        }
+        if (youWon == true)
+        {
+            winScreen.SetActive(true);
+            hasGameStarted = false;
+            pauseText.SetActive(false);
+            if (!youWonSound.isPlaying)
+            {
+                youWonSound.Play();
+            }
+            youWon = false;
+            
+            
+
         }
 
 
