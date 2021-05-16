@@ -3,4 +3,8 @@
 ![alt-text](https://raw.githubusercontent.com/JoelUrena/ocelot-overide/main/preview.gif)
 
 ## Known bugs:
-- Game speed doubles when monitors frame rate is higher than 60hz. For now, make sure the monitor is set to 60hz. 
+- Game speed doubles when monitors frame rate is higher than 60hz only on the windows executable file. For now, make sure the monitor is set to 60hz. 
+- On the web player, playing it on windowed mode, ui is slightly missplaced. For now, play in fullscreen mode. 
+## Links:
+- [Play it on the web](https://joelurena.com/ocelot-overide)
+- [Play it on Windows](https://github.com/JoelUrena/ocelot-overide/releases/tag/v1.0)
